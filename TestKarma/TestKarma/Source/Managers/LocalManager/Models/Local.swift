@@ -15,9 +15,9 @@ struct Local: Codable {
     let latitude: Double
     let longitude: Double
     let following: Bool
-    let description: String
-    let phone: String
-    let website: String
+    let description: String?
+    let phone: String?
+    let website: String?
 }
 
 extension Local {
