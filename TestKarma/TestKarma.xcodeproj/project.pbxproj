@@ -15,6 +15,8 @@
 		75C0F243249266AA00FF32FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C0F241249266AA00FF32FA /* LaunchScreen.storyboard */; };
 		75C0F24E249266AA00FF32FA /* TestKarmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F24D249266AA00FF32FA /* TestKarmaTests.swift */; };
 		75C0F25D249268C000FF32FA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F25C249268C000FF32FA /* NetworkManager.swift */; };
+		75C0F26324926DB700FF32FA /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F26224926DB700FF32FA /* Local.swift */; };
+		75C0F26824926E6F00FF32FA /* LocalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F26724926E6F00FF32FA /* LocalTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		75C0F24D249266AA00FF32FA /* TestKarmaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKarmaTests.swift; sourceTree = "<group>"; };
 		75C0F24F249266AA00FF32FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C0F25C249268C000FF32FA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		75C0F26224926DB700FF32FA /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local.swift; sourceTree = "<group>"; };
+		75C0F26724926E6F00FF32FA /* LocalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		75C0F24C249266AA00FF32FA /* TestKarmaTests */ = {
 			isa = PBXGroup;
 			children = (
+				75C0F26424926E4600FF32FA /* Managers */,
 				75C0F24D249266AA00FF32FA /* TestKarmaTests.swift */,
 				75C0F24F249266AA00FF32FA /* Info.plist */,
 			);
@@ -121,6 +126,7 @@
 		75C0F25A249268A300FF32FA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				75C0F25E24926D5800FF32FA /* LocalManager */,
 				75C0F25B249268AB00FF32FA /* NetworkManager */,
 			);
 			path = Managers;
@@ -132,6 +138,46 @@
 				75C0F25C249268C000FF32FA /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		75C0F25E24926D5800FF32FA /* LocalManager */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F26124926D9D00FF32FA /* Models */,
+			);
+			path = LocalManager;
+			sourceTree = "<group>";
+		};
+		75C0F26124926D9D00FF32FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F26224926DB700FF32FA /* Local.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75C0F26424926E4600FF32FA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F26524926E4D00FF32FA /* LocalManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		75C0F26524926E4D00FF32FA /* LocalManager */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F26624926E6100FF32FA /* Model */,
+			);
+			path = LocalManager;
+			sourceTree = "<group>";
+		};
+		75C0F26624926E6100FF32FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F26724926E6F00FF32FA /* LocalTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C0F25D249268C000FF32FA /* NetworkManager.swift in Sources */,
+				75C0F26324926DB700FF32FA /* Local.swift in Sources */,
 				75C0F23B249266A900FF32FA /* ViewController.swift in Sources */,
 				75C0F237249266A900FF32FA /* AppDelegate.swift in Sources */,
 				75C0F239249266A900FF32FA /* SceneDelegate.swift in Sources */,
@@ -247,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C0F24E249266AA00FF32FA /* TestKarmaTests.swift in Sources */,
+				75C0F26824926E6F00FF32FA /* LocalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
