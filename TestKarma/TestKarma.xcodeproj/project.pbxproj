@@ -21,8 +21,8 @@
 		75C0F27224927A9A00FF32FA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27124927A9A00FF32FA /* APIRequest.swift */; };
 		75C0F27424927BA900FF32FA /* LocalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27324927BA900FF32FA /* LocalRequest.swift */; };
 		75C0F27624927BB200FF32FA /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27524927BB200FF32FA /* LocalService.swift */; };
-		75C0F27924927F2200FF32FA /* LocalManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27824927F2200FF32FA /* LocalManagerTests.swift */; };
 		75C0F27C24927F9200FF32FA /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27B24927F9200FF32FA /* MockNetworkManager.swift */; };
+		75C0F27E249281FA00FF32FA /* LocalManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27D249281FA00FF32FA /* LocalManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,8 @@
 		75C0F27124927A9A00FF32FA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		75C0F27324927BA900FF32FA /* LocalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequest.swift; sourceTree = "<group>"; };
 		75C0F27524927BB200FF32FA /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
-		75C0F27824927F2200FF32FA /* LocalManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManagerTests.swift; sourceTree = "<group>"; };
 		75C0F27B24927F9200FF32FA /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		75C0F27D249281FA00FF32FA /* LocalManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				75C0F26624926E6100FF32FA /* Model */,
-				75C0F27824927F2200FF32FA /* LocalManagerTests.swift */,
+				75C0F27D249281FA00FF32FA /* LocalManagerTests.swift */,
 			);
 			path = LocalManager;
 			sourceTree = "<group>";
@@ -341,7 +341,7 @@
 				75C0F26F2492778C00FF32FA /* NetworkManagerTests.swift in Sources */,
 				75C0F24E249266AA00FF32FA /* TestKarmaTests.swift in Sources */,
 				75C0F26824926E6F00FF32FA /* LocalTests.swift in Sources */,
-				75C0F27924927F2200FF32FA /* LocalManagerTests.swift in Sources */,
+				75C0F27E249281FA00FF32FA /* LocalManagerTests.swift in Sources */,
 				75C0F27C24927F9200FF32FA /* MockNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
