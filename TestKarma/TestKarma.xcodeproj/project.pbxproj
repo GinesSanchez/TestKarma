@@ -22,6 +22,7 @@
 		75C0F27424927BA900FF32FA /* LocalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27324927BA900FF32FA /* LocalRequest.swift */; };
 		75C0F27624927BB200FF32FA /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27524927BB200FF32FA /* LocalService.swift */; };
 		75C0F27924927F2200FF32FA /* LocalManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27824927F2200FF32FA /* LocalManagerTests.swift */; };
+		75C0F27C24927F9200FF32FA /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F27B24927F9200FF32FA /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		75C0F27324927BA900FF32FA /* LocalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRequest.swift; sourceTree = "<group>"; };
 		75C0F27524927BB200FF32FA /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		75C0F27824927F2200FF32FA /* LocalManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManagerTests.swift; sourceTree = "<group>"; };
+		75C0F27B24927F9200FF32FA /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		75C0F24C249266AA00FF32FA /* TestKarmaTests */ = {
 			isa = PBXGroup;
 			children = (
+				75C0F27A24927F6D00FF32FA /* Mock */,
 				75C0F26424926E4600FF32FA /* Managers */,
 				75C0F24D249266AA00FF32FA /* TestKarmaTests.swift */,
 				75C0F24F249266AA00FF32FA /* Info.plist */,
@@ -209,6 +212,14 @@
 				75C0F27124927A9A00FF32FA /* APIRequest.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		75C0F27A24927F6D00FF32FA /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F27B24927F9200FF32FA /* MockNetworkManager.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +342,7 @@
 				75C0F24E249266AA00FF32FA /* TestKarmaTests.swift in Sources */,
 				75C0F26824926E6F00FF32FA /* LocalTests.swift in Sources */,
 				75C0F27924927F2200FF32FA /* LocalManagerTests.swift in Sources */,
+				75C0F27C24927F9200FF32FA /* MockNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
