@@ -30,6 +30,7 @@
 		75C0F28B24928A0D00FF32FA /* LocalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F28A24928A0D00FF32FA /* LocalsCoordinator.swift */; };
 		75C0F28D24928C2400FF32FA /* LocalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F28C24928C2400FF32FA /* LocalsViewModel.swift */; };
 		75C0F29024928F0A00FF32FA /* ViewModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F28F24928F0A00FF32FA /* ViewModuleFactory.swift */; };
+		75C0F2992492964900FF32FA /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F2982492964900FF32FA /* ViewModelState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		75C0F28A24928A0D00FF32FA /* LocalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalsCoordinator.swift; sourceTree = "<group>"; };
 		75C0F28C24928C2400FF32FA /* LocalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalsViewModel.swift; sourceTree = "<group>"; };
 		75C0F28F24928F0A00FF32FA /* ViewModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModuleFactory.swift; sourceTree = "<group>"; };
+		75C0F2982492964900FF32FA /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		75C0F2592492685800FF32FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				75C0F2972492963900FF32FA /* Enums */,
 				75C0F28E24928EF900FF32FA /* Factories */,
 				75C0F2872492882600FF32FA /* AppAndSceneDelegate */,
 				75C0F281249287F100FF32FA /* ViewModules */,
@@ -275,6 +278,14 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		75C0F2972492963900FF32FA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F2982492964900FF32FA /* ViewModelState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,6 +393,7 @@
 				75C0F27624927BB200FF32FA /* LocalService.swift in Sources */,
 				75C0F26324926DB700FF32FA /* Local.swift in Sources */,
 				75C0F27424927BA900FF32FA /* LocalRequest.swift in Sources */,
+				75C0F2992492964900FF32FA /* ViewModelState.swift in Sources */,
 				75C0F28D24928C2400FF32FA /* LocalsViewModel.swift in Sources */,
 				75C0F2852492880B00FF32FA /* LocalsViewController.swift in Sources */,
 				75C0F280249286E700FF32FA /* Coordinating.swift in Sources */,

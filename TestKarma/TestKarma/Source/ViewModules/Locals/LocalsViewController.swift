@@ -27,5 +27,23 @@ final class LocalsViewController: UIViewController {
 }
 
 extension LocalsViewController: LocalsViewModelDelegate {
-    //TODO:
+    func viewModel(_ viewModel: LocalsViewModelType, stateDidChange state: ViewModelState<LocalsViewModelReadyState>) {
+        switch state {
+        case .empty:
+            //TODO:
+            break
+        case .loading:
+            //TODO:
+            break
+        case .initialized:
+            //TODO:
+            break
+        case .failure(let error):
+            //TODO:
+            break
+        case .ready(let readyState):
+            //TODO:
+            break
+        }
+    }
 }
