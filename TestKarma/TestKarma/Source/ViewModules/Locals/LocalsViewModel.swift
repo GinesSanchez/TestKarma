@@ -67,7 +67,10 @@ private extension LocalsViewModel {
             case .failure(let error):
                 self?.state = .failure(error)
             case .success(let localsArray):
-                //TODO: Check empty state
+                guard localsArray.count > 0 else {
+                    self?.state = .empty
+                    return
+                }
                 let localUIArray = localsArray.map { local in
                     //TODO: Get the distance and short by it
                     LocalUI(name: local.name, distance: "\(local.latitude)", following: local.following)

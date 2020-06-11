@@ -16,6 +16,7 @@ protocol LocalsViewControllerDelegate: class {
 final class LocalsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageLabel: UILabel!
 
     var viewModel: LocalsViewControllerDelegate?
     private var localsArray: [LocalUI] = []
@@ -66,18 +67,18 @@ extension LocalsViewController: LocalsViewModelDelegate {
     func viewModel(_ viewModel: LocalsViewModelType, stateDidChange state: ViewModelState<LocalsViewModelReadyState>) {
         switch state {
         case .empty:
-            //TODO:
-            break
+            tableView.isHidden = true
+            messageLabel.text = "No results."
         case .loading:
-            //TODO:
-            break
+            tableView.isHidden = true
+            messageLabel.text = "Loading..."
         case .initialized:
-            //TODO:
             break
-        case .failure(let error):
-            //TODO:
-            break
+        case .failure:
+            tableView.isHidden = true
+            messageLabel.text = "There was a problem. Try again later."
         case .ready(let readyState):
+            tableView.isHidden = false
             switch readyState {
             case .localsArrayReady(let array):
                 localsArray = array
