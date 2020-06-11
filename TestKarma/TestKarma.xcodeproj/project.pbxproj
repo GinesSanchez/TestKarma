@@ -79,11 +79,8 @@
 		75C0F235249266A900FF32FA /* TestKarma */ = {
 			isa = PBXGroup;
 			children = (
-				75C0F236249266A900FF32FA /* AppDelegate.swift */,
-				75C0F238249266A900FF32FA /* SceneDelegate.swift */,
-				75C0F23A249266A900FF32FA /* ViewController.swift */,
-				75C0F23C249266A900FF32FA /* Main.storyboard */,
-				75C0F23F249266AA00FF32FA /* Assets.xcassets */,
+				75C0F2592492685800FF32FA /* Source */,
+				75C0F2582492684400FF32FA /* Resources */,
 				75C0F241249266AA00FF32FA /* LaunchScreen.storyboard */,
 				75C0F244249266AA00FF32FA /* Info.plist */,
 			);
@@ -97,6 +94,25 @@
 				75C0F24F249266AA00FF32FA /* Info.plist */,
 			);
 			path = TestKarmaTests;
+			sourceTree = "<group>";
+		};
+		75C0F2582492684400FF32FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F23F249266AA00FF32FA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75C0F2592492685800FF32FA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F236249266A900FF32FA /* AppDelegate.swift */,
+				75C0F238249266A900FF32FA /* SceneDelegate.swift */,
+				75C0F23A249266A900FF32FA /* ViewController.swift */,
+				75C0F23C249266A900FF32FA /* Main.storyboard */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
