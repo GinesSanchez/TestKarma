@@ -17,6 +17,7 @@
 		75C0F25D249268C000FF32FA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F25C249268C000FF32FA /* NetworkManager.swift */; };
 		75C0F26324926DB700FF32FA /* Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F26224926DB700FF32FA /* Local.swift */; };
 		75C0F26824926E6F00FF32FA /* LocalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F26724926E6F00FF32FA /* LocalTests.swift */; };
+		75C0F26F2492778C00FF32FA /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F26E2492778C00FF32FA /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		75C0F25C249268C000FF32FA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		75C0F26224926DB700FF32FA /* Local.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local.swift; sourceTree = "<group>"; };
 		75C0F26724926E6F00FF32FA /* LocalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTests.swift; sourceTree = "<group>"; };
+		75C0F26E2492778C00FF32FA /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		75C0F26424926E4600FF32FA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				75C0F26D2492777900FF32FA /* NetworkManager */,
 				75C0F26524926E4D00FF32FA /* LocalManager */,
 			);
 			path = Managers;
@@ -178,6 +181,14 @@
 				75C0F26724926E6F00FF32FA /* LocalTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		75C0F26D2492777900FF32FA /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F26E2492778C00FF32FA /* NetworkManagerTests.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C0F26F2492778C00FF32FA /* NetworkManagerTests.swift in Sources */,
 				75C0F24E249266AA00FF32FA /* TestKarmaTests.swift in Sources */,
 				75C0F26824926E6F00FF32FA /* LocalTests.swift in Sources */,
 			);
