@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import CoreLocation
+
+private let officeLocation = CLLocation(latitude: 59.330596, longitude: 18.0560967)
 
 enum LocalsViewModelReadyState {
     case localsArrayReady([LocalUI])
@@ -66,14 +69,20 @@ private extension LocalsViewModel {
             switch result {
             case .failure(let error):
                 self?.state = .failure(error)
-            case .success(let localsArray):
-                guard localsArray.count > 0 else {
+            case .success(let localArray):
+                guard localArray.count > 0 else {
                     self?.state = .empty
                     return
                 }
-                let localUIArray = localsArray.map { local in
-                    //TODO: Get the distance and short by it
-                    LocalUI(name: local.name, distance: "\(local.latitude)", following: local.following)
+
+                let sortedLocalArray = localArray.sorted {
+                    $0.location.distance(from: officeLocation) < $1.location.distance(from: officeLocation)
+                }
+
+                let localUIArray = sortedLocalArray.map {
+                    LocalUI(name: $0.name,
+                            distance: String(format:"%.03f Km", $0.location.distance(from: officeLocation) / 1000),
+                            following: $0.following)
                 }
                 self?.localUIArray = localUIArray
                 self?.state = .ready(.localsArrayReady(localUIArray))
