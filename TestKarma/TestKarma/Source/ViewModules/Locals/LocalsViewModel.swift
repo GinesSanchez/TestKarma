@@ -9,7 +9,7 @@
 import Foundation
 
 enum LocalsViewModelReadyState {
-    case localsArrayReady([Local])
+    case localsArrayReady([LocalUI])
 }
 
 protocol LocalsViewModelDelegate: class {
@@ -26,6 +26,8 @@ protocol LocalsViewModelType {
 final class LocalsViewModel: LocalsViewModelType {
     var localManager: LocalManagerType
     weak var delegate: LocalsViewModelDelegate?
+
+    private var localUIArray: [LocalUI] = []
 
     var state: ViewModelState<LocalsViewModelReadyState> {
         didSet {
@@ -48,6 +50,12 @@ extension LocalsViewModel: LocalsViewControllerDelegate {
     func viewDidLoad() {
         getLocals()
     }
+
+    func updateFollowingStateFor(indexPath: IndexPath) {
+        let local = localUIArray[indexPath.row]
+        localUIArray[indexPath.row] = LocalUI(name: local.name, distance: local.distance, following: !local.following)
+        self.state = .ready(.localsArrayReady(localUIArray))
+    }
 }
 
 // MARK: - Helper functions
@@ -59,7 +67,14 @@ private extension LocalsViewModel {
             case .failure(let error):
                 self?.state = .failure(error)
             case .success(let localsArray):
-                self?.state = .ready(.localsArrayReady(localsArray))
+                //TODO: Check empty state
+                let localUIArray = localsArray.map { local in
+                    //TODO: Get the distance and short by it
+                    LocalUI(name: local.name, distance: "\(local.latitude)", following: local.following)
+                }
+                self?.localUIArray = localUIArray
+                self?.state = .ready(.localsArrayReady(localUIArray))
+                break
             }
         }
     }
