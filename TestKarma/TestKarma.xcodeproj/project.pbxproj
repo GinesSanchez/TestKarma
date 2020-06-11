@@ -28,6 +28,8 @@
 		75C0F2862492880B00FF32FA /* LocalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C0F2842492880B00FF32FA /* LocalsViewController.xib */; };
 		75C0F2892492885E00FF32FA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F2882492885E00FF32FA /* AppCoordinator.swift */; };
 		75C0F28B24928A0D00FF32FA /* LocalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F28A24928A0D00FF32FA /* LocalsCoordinator.swift */; };
+		75C0F28D24928C2400FF32FA /* LocalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F28C24928C2400FF32FA /* LocalsViewModel.swift */; };
+		75C0F29024928F0A00FF32FA /* ViewModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F28F24928F0A00FF32FA /* ViewModuleFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		75C0F2842492880B00FF32FA /* LocalsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalsViewController.xib; sourceTree = "<group>"; };
 		75C0F2882492885E00FF32FA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		75C0F28A24928A0D00FF32FA /* LocalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalsCoordinator.swift; sourceTree = "<group>"; };
+		75C0F28C24928C2400FF32FA /* LocalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalsViewModel.swift; sourceTree = "<group>"; };
+		75C0F28F24928F0A00FF32FA /* ViewModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModuleFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		75C0F2592492685800FF32FA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				75C0F28E24928EF900FF32FA /* Factories */,
 				75C0F2872492882600FF32FA /* AppAndSceneDelegate */,
 				75C0F281249287F100FF32FA /* ViewModules */,
 				75C0F27024927A8500FF32FA /* Protocols */,
@@ -246,6 +251,7 @@
 				75C0F2832492880B00FF32FA /* LocalsViewController.swift */,
 				75C0F2842492880B00FF32FA /* LocalsViewController.xib */,
 				75C0F28A24928A0D00FF32FA /* LocalsCoordinator.swift */,
+				75C0F28C24928C2400FF32FA /* LocalsViewModel.swift */,
 			);
 			path = Locals;
 			sourceTree = "<group>";
@@ -259,6 +265,14 @@
 				75C0F2882492885E00FF32FA /* AppCoordinator.swift */,
 			);
 			path = AppAndSceneDelegate;
+			sourceTree = "<group>";
+		};
+		75C0F28E24928EF900FF32FA /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F28F24928F0A00FF32FA /* ViewModuleFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,11 +382,13 @@
 				75C0F27624927BB200FF32FA /* LocalService.swift in Sources */,
 				75C0F26324926DB700FF32FA /* Local.swift in Sources */,
 				75C0F27424927BA900FF32FA /* LocalRequest.swift in Sources */,
+				75C0F28D24928C2400FF32FA /* LocalsViewModel.swift in Sources */,
 				75C0F2852492880B00FF32FA /* LocalsViewController.swift in Sources */,
 				75C0F280249286E700FF32FA /* Coordinating.swift in Sources */,
 				75C0F23B249266A900FF32FA /* ViewController.swift in Sources */,
 				75C0F28B24928A0D00FF32FA /* LocalsCoordinator.swift in Sources */,
 				75C0F237249266A900FF32FA /* AppDelegate.swift in Sources */,
+				75C0F29024928F0A00FF32FA /* ViewModuleFactory.swift in Sources */,
 				75C0F27224927A9A00FF32FA /* APIRequest.swift in Sources */,
 				75C0F239249266A900FF32FA /* SceneDelegate.swift in Sources */,
 			);

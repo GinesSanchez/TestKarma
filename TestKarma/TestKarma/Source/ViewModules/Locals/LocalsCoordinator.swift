@@ -14,15 +14,16 @@ protocol LocalsCoordinatorType: Coordinating { }
 final class LocalsCoordinator: LocalsCoordinatorType {
 
     var navigationController: UINavigationController
+    let viewModuleFactory: ViewModuleFactoryType
     private var localsViewController: LocalsViewController?
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType) {
         self.navigationController = navigationController
-        return
+        self.viewModuleFactory = viewModuleFactory
     }
 
     func start() {
-        localsViewController = LocalsViewController.init(nibName: "LocalsViewController", bundle: nil)
+        localsViewController = viewModuleFactory.createLocalsViewModule()
         navigationController.pushViewController(localsViewController!, animated: true)
     }
 

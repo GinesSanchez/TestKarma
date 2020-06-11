@@ -11,9 +11,10 @@ import UIKit
 protocol Coordinating: class {
     //Properties
     var navigationController: UINavigationController { get }
+    var viewModuleFactory: ViewModuleFactoryType { get }
 
     //Functions
-    init(navigationController: UINavigationController)
+    init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType)
     func start()
     func stop()
 }
