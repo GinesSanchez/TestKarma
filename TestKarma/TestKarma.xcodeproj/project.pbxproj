@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75167848249B99FA007639F2 /* LocalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75167847249B99FA007639F2 /* LocalDetailViewModel.swift */; };
+		754E1501249B957F00A17CAE /* LocalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E14FF249B957F00A17CAE /* LocalDetailViewController.swift */; };
+		754E1502249B957F00A17CAE /* LocalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754E1500249B957F00A17CAE /* LocalDetailViewController.xib */; };
 		75AEAA02249341EE0095D9A6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 75AEAA01249341EE0095D9A6 /* README.md */; };
 		75C0F237249266A900FF32FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F236249266A900FF32FA /* AppDelegate.swift */; };
 		75C0F239249266A900FF32FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0F238249266A900FF32FA /* SceneDelegate.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75167847249B99FA007639F2 /* LocalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDetailViewModel.swift; sourceTree = "<group>"; };
+		754E14FF249B957F00A17CAE /* LocalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDetailViewController.swift; sourceTree = "<group>"; };
+		754E1500249B957F00A17CAE /* LocalDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalDetailViewController.xib; sourceTree = "<group>"; };
 		75AEAA01249341EE0095D9A6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		75C0F233249266A900FF32FA /* TestKarma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKarma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C0F236249266A900FF32FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		754E14FE249B955F00A17CAE /* LocalDetail */ = {
+			isa = PBXGroup;
+			children = (
+				754E14FF249B957F00A17CAE /* LocalDetailViewController.swift */,
+				754E1500249B957F00A17CAE /* LocalDetailViewController.xib */,
+				75167847249B99FA007639F2 /* LocalDetailViewModel.swift */,
+			);
+			path = LocalDetail;
+			sourceTree = "<group>";
+		};
+		754E1503249B95D100A17CAE /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				75C0F2832492880B00FF32FA /* LocalsViewController.swift */,
+				75C0F2842492880B00FF32FA /* LocalsViewController.xib */,
+				75C0F28C24928C2400FF32FA /* LocalsViewModel.swift */,
+				75C0F29F2492A33100FF32FA /* LocalTableViewCell.swift */,
+				75C0F2A02492A33100FF32FA /* LocalTableViewCell.xib */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
 		75C0F22A249266A900FF32FA = {
 			isa = PBXGroup;
 			children = (
@@ -260,13 +288,10 @@
 		75C0F282249287FB00FF32FA /* Locals */ = {
 			isa = PBXGroup;
 			children = (
-				75C0F29A24929CD700FF32FA /* Models */,
-				75C0F2832492880B00FF32FA /* LocalsViewController.swift */,
-				75C0F2842492880B00FF32FA /* LocalsViewController.xib */,
 				75C0F28A24928A0D00FF32FA /* LocalsCoordinator.swift */,
-				75C0F28C24928C2400FF32FA /* LocalsViewModel.swift */,
-				75C0F29F2492A33100FF32FA /* LocalTableViewCell.swift */,
-				75C0F2A02492A33100FF32FA /* LocalTableViewCell.xib */,
+				754E1503249B95D100A17CAE /* Lists */,
+				754E14FE249B955F00A17CAE /* LocalDetail */,
+				75C0F29A24929CD700FF32FA /* Models */,
 			);
 			path = Locals;
 			sourceTree = "<group>";
@@ -392,6 +417,7 @@
 				75C0F240249266AA00FF32FA /* Assets.xcassets in Resources */,
 				75C0F2A22492A33100FF32FA /* LocalTableViewCell.xib in Resources */,
 				75C0F2862492880B00FF32FA /* LocalsViewController.xib in Resources */,
+				754E1502249B957F00A17CAE /* LocalDetailViewController.xib in Resources */,
 				75C0F23E249266A900FF32FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,10 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C0F2892492885E00FF32FA /* AppCoordinator.swift in Sources */,
+				754E1501249B957F00A17CAE /* LocalDetailViewController.swift in Sources */,
 				75C0F29E2492A13F00FF32FA /* LocalUI.swift in Sources */,
 				75C0F25D249268C000FF32FA /* NetworkManager.swift in Sources */,
 				75C0F27624927BB200FF32FA /* LocalService.swift in Sources */,
 				75C0F26324926DB700FF32FA /* Local.swift in Sources */,
+				75167848249B99FA007639F2 /* LocalDetailViewModel.swift in Sources */,
 				75C0F27424927BA900FF32FA /* LocalRequest.swift in Sources */,
 				75C0F2992492964900FF32FA /* ViewModelState.swift in Sources */,
 				75C0F28D24928C2400FF32FA /* LocalsViewModel.swift in Sources */,

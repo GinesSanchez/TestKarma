@@ -47,8 +47,11 @@ final class LocalManager: LocalManagerType {
 
             do {
                 let localsArray = try JSONDecoder().decode([Local].self, from: data)
+                //TODO: Store in User Defaults
                 completion(.success(localsArray))
             } catch {
+
+                //TODO: Restore from User Defaults
                 return completion(.failure(.invalidJson))
             }
         }

@@ -11,6 +11,7 @@ import UIKit
 protocol LocalsViewControllerDelegate: class {
     func viewDidLoad()
     func updateFollowingStateFor(indexPath: IndexPath)
+    func didSelectLocalAt(indexPath: IndexPath)
 }
 
 final class LocalsViewController: UIViewController {
@@ -45,6 +46,7 @@ private extension LocalsViewController {
         let nib = UINib(nibName: "LocalTableViewCell",bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "LocalCell")
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.tableFooterView = UIView()    //Hide the extra empty cell divider lines
     }
 }
@@ -59,6 +61,14 @@ extension LocalsViewController: UITableViewDataSource {
         let cell: LocalTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "LocalCell") as! LocalTableViewCell
         cell.configure(with: localsArray[indexPath.row], delegate: self)
         return cell
+    }
+}
+
+//MARK: - UITableViewDataSource
+extension LocalsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.didSelectLocalAt(indexPath: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

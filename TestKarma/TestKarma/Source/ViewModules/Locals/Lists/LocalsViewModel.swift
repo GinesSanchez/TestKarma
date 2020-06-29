@@ -19,18 +19,25 @@ protocol LocalsViewModelDelegate: class {
     func viewModel(_ viewModel: LocalsViewModelType, stateDidChange state: ViewModelState<LocalsViewModelReadyState>)
 }
 
+protocol LocalViewModelCoordinatorDelegate: class {
+    func showDetailsFor(local: Local)
+}
+
 protocol LocalsViewModelType {
     var localManager: LocalManagerType { get }
     var delegate: LocalsViewModelDelegate? { get }
+    var coordinator: LocalViewModelCoordinatorDelegate? { get }
     var state: ViewModelState<LocalsViewModelReadyState> { get }
-    init(localManager: LocalManagerType, delegate: LocalsViewModelDelegate)
+    init(localManager: LocalManagerType, delegate: LocalsViewModelDelegate, coordinator: LocalViewModelCoordinatorDelegate)
 }
 
 final class LocalsViewModel: LocalsViewModelType {
     var localManager: LocalManagerType
     weak var delegate: LocalsViewModelDelegate?
+    weak var coordinator: LocalViewModelCoordinatorDelegate?
 
     private var localUIArray: [LocalUI] = []
+    private var localArray: [Local] = []
 
     var state: ViewModelState<LocalsViewModelReadyState> {
         didSet {
@@ -41,10 +48,11 @@ final class LocalsViewModel: LocalsViewModelType {
         }
     }
 
-    init(localManager: LocalManagerType, delegate: LocalsViewModelDelegate) {
+    init(localManager: LocalManagerType, delegate: LocalsViewModelDelegate, coordinator: LocalViewModelCoordinatorDelegate) {
         self.localManager = localManager
         self.delegate = delegate
         self.state = .initialized
+        self.coordinator = coordinator
     }
 }
 
@@ -56,8 +64,13 @@ extension LocalsViewModel: LocalsViewControllerDelegate {
 
     func updateFollowingStateFor(indexPath: IndexPath) {
         let local = localUIArray[indexPath.row]
+        //TODO: Update array in Locals Service
         localUIArray[indexPath.row] = LocalUI(name: local.name, distance: local.distance, following: !local.following)
         self.state = .ready(.localsArrayReady(localUIArray))
+    }
+
+    func didSelectLocalAt(indexPath: IndexPath) {
+        coordinator?.showDetailsFor(local: localArray[indexPath.row])
     }
 }
 
@@ -75,17 +88,17 @@ private extension LocalsViewModel {
                     return
                 }
 
-                let sortedLocalArray = localArray.sorted {
+                self?.localArray = localArray.sorted {
                     $0.location.distance(from: officeLocation) < $1.location.distance(from: officeLocation)
                 }
 
-                let localUIArray = sortedLocalArray.map {
+                let localUIArray = self?.localArray.map {
                     LocalUI(name: $0.name,
                             distance: String(format:"%.03f Km", $0.location.distance(from: officeLocation) / 1000),
                             following: $0.following)
                 }
-                self?.localUIArray = localUIArray
-                self?.state = .ready(.localsArrayReady(localUIArray))
+                self?.localUIArray = localUIArray!
+                self?.state = .ready(.localsArrayReady(localUIArray!))
                 break
             }
         }

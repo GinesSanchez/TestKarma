@@ -16,6 +16,7 @@ final class LocalsCoordinator: LocalsCoordinatorType {
     var navigationController: UINavigationController
     let viewModuleFactory: ViewModuleFactoryType
     private var localsViewController: LocalsViewController?
+    private var detailViewController: LocalDetailViewController?
 
     init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType) {
         self.navigationController = navigationController
@@ -23,12 +24,28 @@ final class LocalsCoordinator: LocalsCoordinatorType {
     }
 
     func start() {
-        localsViewController = viewModuleFactory.createLocalsViewModule()
+        localsViewController = viewModuleFactory.createLocalsViewModule(coordinator: self)
         navigationController.pushViewController(localsViewController!, animated: true)
     }
 
     func stop() {
         self.navigationController .popViewController(animated: true)
         localsViewController = nil
+    }
+}
+
+extension LocalsCoordinator: LocalViewModelCoordinatorDelegate {
+
+    func showDetailsFor(local: Local) {
+        detailViewController = viewModuleFactory.createDetailViewModule(local: local)
+        navigationController.pushViewController(detailViewController!, animated: true)
+    }
+}
+
+extension LocalsCoordinator: DetailViewModelCoordinatorDelegate {
+
+    func goBackButtonTapped() {
+        navigationController.popViewController(animated: true)
+        detailViewController = nil
     }
 }
